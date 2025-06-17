@@ -8,12 +8,12 @@ export const loadStatueModel = (scene) => {
   const loader = new GLTFLoader();
 
   loader.load(
-    "../public/models/statue/girl_with_doves.glb",
+    "/models/statue/girl_with_doves.glb",
     (gltf) => {
       const statue = gltf.scene;
       loadedStatue = statue; // Assign to the exported variable
 
-      // console.log("STATUE", gltf);
+      console.log("Statue", gltf);
 
       // Position the statue at the center of the floor
       statue.position.set(0, -2.9, 0);
@@ -42,3 +42,4 @@ export const loadStatueModel = (scene) => {
     }
   );
 };
+
