@@ -16,7 +16,7 @@ import { setupVR } from "./modules/VRSupport.js";
 import { loadStatueModel } from "./modules/statue.js";
 import { loadBenchModel } from "./modules/bench.js";
 import { loadCeilingLampModel } from "./modules/ceilingLamp.js";
-
+//working sell
 let { camera, controls, renderer } = setupScene();
 
 setupAudio(camera);
