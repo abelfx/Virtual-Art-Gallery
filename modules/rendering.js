@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { displayPaintingInfo, hidePaintingInfo } from "./paintingInfo.js";
 import { updateMovement } from "./movement.js";
+import { loadedStatue } from "./statue.js";
 
 export const setupRendering = (
   scene,
@@ -16,6 +17,10 @@ export const setupRendering = (
     const delta = clock.getDelta();
 
     updateMovement(delta, controls, camera, walls);
+
+    if (loadedStatue) {
+      loadedStatue.rotation.y += 0.01;
+    }
 
     const distanceThreshold = 8;
 
